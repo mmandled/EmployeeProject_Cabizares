@@ -60,6 +60,9 @@ public class HourlyEmployee {
             baseSalary = regularPay + overtimePay;
         }
 
+        if (birthDate != null && birthDate.getMonth() == LocalDate.now().getMonthValue()) {
+            baseSalary += 5000;
+        }
         return baseSalary;
     }
 
